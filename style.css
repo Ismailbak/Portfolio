@@ -199,10 +199,10 @@ section {
   text-align: center;
 }
 
-#socials-container {
+#socials-containers {
   display: flex;
   justify-content: center;
-  margin-top: 2rem;
+  padding-top: 15px;
   gap: 1rem;
 }
 
