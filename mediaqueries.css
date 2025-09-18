@@ -1,13 +1,15 @@
 @media screen and (max-width : 1400px) {
     #profile {
-        height: 83vh;
-        margin-bottom: 6rem;
+        height: 100vh;
+        margin-bottom: 0;
     }
     .about-containers {
         flex-wrap: wrap;
     }
+    section {
+        padding-top: 10vh;
+    }
 }
-
 
 @media screen and (max-width : 1200px) {
     #desktop-nav {
@@ -33,77 +35,175 @@
     }
     section {
         margin: 0 5%;
+        padding-top: 12vh;
+    }
+    section:nth-child(even) {
+        margin: 0;
+        padding-left: 5%;
+        padding-right: 5%;
     }
     .section__pic-container {
-        width: 275px;
-        height: 275px;
+        width: 300px;
+        height: 300px;
         margin: 0 auto 2rem;
     }
     .about-containers {
         margin-top: 0;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    .title {
+        font-size: 2.5rem;
+    }
+
+    /* Contact Section Tablet Styling */
+    .contact-info-upper-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        max-width: 800px;
+        gap: 1.5rem;
+    }
+
+    .contact-info-container {
+        min-width: 180px;
+        flex: 0 1 auto;
     }
 }
 
 @media screen and (max-width : 600px) {
-#contact, footer {
-    height: 40vh;
-}
-#profile {
-    height: 83vh;
-    margin-bottom: 0;
-}
-article {
-    font-size: 1rem;
-}
+    #contact, footer {
+        height: fit-content;
+        min-height: 40vh;
+    }
+    #profile {
+        height: 100vh;
+        margin-bottom: 0;
+        padding-top: 15vh;
+    }
+    article {
+        font-size: 1rem;
+    }
 
-footer nav {
-    height: fit-content;
-    margin-bottom: 2rem;
-}
+    footer nav {
+        height: fit-content;
+        margin-bottom: 2rem;
+    }
 
-.about-containers,
-.contact-info-upper-container,
-.btn-container {
-    flex-wrap: wrap;
-}
+    .about-containers,
+    .contact-info-upper-container,
+    .btn-container {
+        flex-wrap: wrap;
+    }
 
-.contact-info-container{
-    margin: 0;
-}
+    /* Contact Section Mobile Styling */
+    .contact-info-upper-container {
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+        margin: 2rem 1rem;
+        max-width: none;
+        gap: 1.5rem;
+        border-radius: 20px;
+    }
 
-.contact-info-container p,
-.nav-links li a {
-    font-size: 1rem ;
-}
+    .contact-info-container {
+        min-width: auto;
+        width: 100%;
+        padding: 1.5rem;
+        margin: 0;
+        border-radius: 15px;
+    }
 
-.experience-sub-title {
-    font-size: 1.25rem;
-}
+    .contact-info-container p {
+        font-size: 0.95rem;
+    }
 
-.logo {
-    font-size: 1.25rem;
-}
+    .contact-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
 
-.nav-links {
-    flex-direction: column;
-    gap: 0.5rem;
-    text-align:center;
-}
-.section__pic-container {
-    width: auto;
-    height: 46vw;
-    justify-content: center;
-}
-.section__text__p2 {
-    font-size: 1.25rem;
-}
-.title {
-    font-size: 2rem;
-}
-.text-container {
-    text-align: justify;
-}
+    .phone-icon-container {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
 
-}
+    .phone-icon {
+        font-size: 1.2rem;
+    }
 
-   
+    .experience-sub-title {
+        font-size: 1.5rem;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-links li {
+        margin: 0;
+    }
+
+    .nav-links li a {
+        font-size: 1rem;
+        padding: 0.6rem 1rem;
+        display: block;
+        border-radius: 6px;
+        transition: all 0.3s ease;
+    }
+
+    .nav-links li a:hover {
+        background: rgba(37, 99, 235, 0.1);
+        transform: none;
+    }
+    
+    .section__pic-container {
+        width: 250px;
+        height: 250px;
+        justify-content: center;
+        margin: 0 auto 2rem;
+    }
+    
+    .section__text__p2 {
+        font-size: 1.4rem;
+    }
+    
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .btn {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+    }
+
+    .details-container {
+        padding: 1.5rem;
+    }
+
+    .tech-stack {
+        gap: 0.8rem;
+    }
+
+    .tech-icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    section {
+        padding-top: 15vh;
+    }
+
+    section:nth-child(even) {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
