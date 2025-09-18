@@ -1,209 +1,1284 @@
-@media screen and (max-width : 1400px) {
-    #profile {
-        height: 100vh;
-        margin-bottom: 0;
-    }
-    .about-containers {
-        flex-wrap: wrap;
-    }
-    section {
-        padding-top: 10vh;
-    }
-}
+/* RESPONSIVE DESIGN - COMPREHENSIVE DEVICE COVERAGE */
 
-@media screen and (max-width : 1200px) {
-    #desktop-nav {
-        display: none;
-    }
-    #hamburger-nav {
-        display: flex;
-    }
-    #experience,
-    .experience-details-container {
-        margin-top: 2rem;
-    }
-    #profile,
-    .section-container {
-        display: block;
-    }
-    .arrow {
-        display: none;
-    }
-    section,
-    .section-container {
-        height: fit-content;
-    }
+/* ==========================================================================
+   BREAKPOINT STRATEGY:
+   - Mobile First Approach
+   - 480px and below: Small mobile phones
+   - 481px - 768px: Large mobile phones
+   - 769px - 1024px: Tablets
+   - 1025px - 1440px: Small to medium desktops
+   - 1441px and above: Large desktops
+   ========================================================================== */
+
+/* Small Mobile Devices (480px and below) */
+@media screen and (max-width: 480px) {
+    /* Layout adjustments */
     section {
-        margin: 0 5%;
-        padding-top: 12vh;
-    }
-    section:nth-child(even) {
+        padding: 2rem 1rem;
         margin: 0;
-        padding-left: 5%;
-        padding-right: 5%;
+        text-align: center;
     }
-    .section__pic-container {
-        width: 300px;
-        height: 300px;
-        margin: 0 auto 2rem;
+    
+    .section-container {
+        padding: 1rem;
     }
-    .about-containers {
-        margin-top: 0;
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+    
+    /* Section headers */
+    .section__text__p1 {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+        text-align: center;
     }
+    
     .title {
-        font-size: 2.5rem;
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        text-align: center;
     }
-
-    /* Contact Section Tablet Styling */
-    .contact-info-upper-container {
-        flex-direction: row;
+    
+    /* Profile section - HIDE PROFILE PICTURE ON MOBILE */
+    #profile {
+        padding: 3rem 1rem 2rem;
+        text-align: center;
+        height: fit-content;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .section__pic-container {
+        display: none; /* Hide profile picture on mobile */
+    }
+    
+    .section__text {
+        margin-top: 0;
+        width: 100%;
+        max-width: 350px;
+    }
+    
+    .section__text__p2 {
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+        text-align: center;
+        font-weight: 600;
+        color: #555;
+    }
+    
+    /* Enhanced text layout without image */
+    #profile .section__text__p1 {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        color: #888;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    
+    #profile .title {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+        background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-weight: 700;
+    }
+    
+    /* Buttons */
+    .btn-container {
+        gap: 0.8rem;
         flex-wrap: wrap;
         justify-content: center;
-        max-width: 800px;
-        gap: 1.5rem;
+        margin: 2rem auto 0;
     }
-
+    
+    .btn {
+        font-size: 0.9rem;
+        padding: 0.8rem 1.5rem;
+        min-width: 140px;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+    }
+    
+    /* Social icons container */
+    #socials-container {
+        margin-top: 1.5rem;
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+    }
+    
+    /* About section (Work Experience) */
+    #about {
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+    
+    .section-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 100%;
+    }
+    
+    .about-details-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    .about-containers {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin: 1rem auto;
+        max-width: 350px;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .details-container {
+        padding: 1.5rem;
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+        max-width: 320px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Experience section - IMPROVED CENTERING */
+    #experience {
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+    
+    .experience-details-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        padding: 0;
+        margin: 0 auto;
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .about-containers {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin: 0 auto;
+        max-width: 350px;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .details-container {
+        padding: 1.5rem;
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+        max-width: 320px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .experience-sub-title {
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        width: 100%;
+    }
+    
+    /* Tech stack - centered layout */
+    .article-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        width: 100%;
+    }
+    
+    article {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .tech-stack {
+        gap: 0.8rem;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+    
+    .tech-icon {
+        width: 32px;
+        height: 32px;
+        flex-shrink: 0;
+    }
+    
+    .tech-category h3 {
+        font-size: 1rem;
+        margin-bottom: 0.8rem;
+        text-align: center;
+    }
+    
+    /* Volunteering section - HIDE LIONS LOGO, CENTER TEXT */
+    #volunteering {
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+    
+    .lions-container {
+        padding: 2rem 1rem;
+        text-align: center;
+        margin: 0 auto;
+        max-width: 350px;
+        background: #f8f9fa;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    
+    .lions-logo-container {
+        display: none; /* Hide Lions logo on mobile */
+    }
+    
+    .lions-logo {
+        display: none; /* Hide Lions logo on mobile */
+    }
+    
+    .lions-content {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .project-title {
+        font-size: 1.4rem;
+        margin: 0 0 1.5rem;
+        text-align: center;
+        color: #333;
+        font-weight: 700;
+        background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    .professional-summary {
+        text-align: center;
+        margin: 1rem 0;
+    }
+    
+    .key-achievements h4 {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+        text-align: center;
+        color: #444;
+        font-weight: 600;
+    }
+    
+    .key-achievements p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+        text-align: center;
+        color: #555;
+    }
+    
+    .achievement-list {
+        list-style: none;
+        padding: 0;
+        text-align: left;
+        margin: 1.5rem 0;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .achievement-list li {
+        font-size: 0.85rem;
+        line-height: 1.5;
+        margin-bottom: 0.8rem;
+        padding-left: 1.2rem;
+        position: relative;
+        color: #555;
+        text-align: left;
+    }
+    
+    .achievement-list li {
+        padding-left: 0;
+    }
+    
+    /* Volunteering buttons - smaller and side by side */
+    #volunteering .btn-container {
+        gap: 0.8rem;
+        margin: 2rem auto;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap !important;
+        width: 100%;
+        text-align: center;
+    }
+    
+    #volunteering .btn {
+        font-size: 0.8rem;
+        padding: 0.6rem 1rem;
+        min-width: 100px;
+        max-width: 140px;
+        border-radius: 20px;
+        flex: 1;
+        margin: 0.2rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .project-btn {
+        transition: all 0.3s ease;
+    }
+    
+    .project-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    
+    /* Certifications */
+    .cert-logo {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .cert-details h3 {
+        font-size: 0.95rem;
+        line-height: 1.3;
+    }
+    
+    .cert-issuer {
+        font-size: 0.8rem;
+    }
+    
+    .cert-date {
+        font-size: 0.75rem;
+    }
+    
+    /* Projects */
+    .project-img {
+        width: 100%;
+        max-width: 280px;
+        height: auto;
+        margin: 0 auto;
+    }
+    
+    .project-description {
+        font-size: 0.85rem;
+        text-align: center;
+    }
+    
+    /* Contact */
+    .contact-info-upper-container {
+        flex-direction: column;
+        gap: 1rem;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
     .contact-info-container {
-        min-width: 180px;
-        flex: 0 1 auto;
+        padding: 1rem;
+        text-align: center;
+    }
+    
+    .contact-icon,
+    .phone-icon-container {
+        width: 2rem;
+        height: 2rem;
+    }
+    
+    .phone-icon {
+        font-size: 1rem;
     }
 }
 
-@media screen and (max-width : 600px) {
-    #contact, footer {
-        height: fit-content;
-        min-height: 40vh;
+/* Large Mobile Devices (481px - 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    /* Layout adjustments */
+    section {
+        padding: 3rem 2rem;
+        margin: 0;
     }
+    
+    /* Profile section */
     #profile {
-        height: 100vh;
-        margin-bottom: 0;
-        padding-top: 15vh;
-    }
-    article {
-        font-size: 1rem;
-    }
-
-    footer nav {
-        height: fit-content;
-        margin-bottom: 2rem;
-    }
-
-    .about-containers,
-    .contact-info-upper-container,
-    .btn-container {
-        flex-wrap: wrap;
-    }
-
-    /* Contact Section Mobile Styling */
-    .contact-info-upper-container {
-        flex-direction: column;
-        padding: 2rem 1.5rem;
-        margin: 2rem 1rem;
-        max-width: none;
-        gap: 1.5rem;
-        border-radius: 20px;
-    }
-
-    .contact-info-container {
-        min-width: auto;
-        width: 100%;
-        padding: 1.5rem;
-        margin: 0;
-        border-radius: 15px;
-    }
-
-    .contact-info-container p {
-        font-size: 0.95rem;
-    }
-
-    .contact-icon {
-        width: 2.5rem;
-        height: 2.5rem;
-    }
-
-    .phone-icon-container {
-        width: 2.5rem;
-        height: 2.5rem;
-    }
-
-    .phone-icon {
-        font-size: 1.2rem;
-    }
-
-    .experience-sub-title {
-        font-size: 1.5rem;
-    }
-
-    .logo {
-        font-size: 1.4rem;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 0.5rem;
+        padding: 3rem 2rem;
         text-align: center;
-        padding: 0;
-        margin: 0;
-    }
-
-    .nav-links li {
-        margin: 0;
-    }
-
-    .nav-links li a {
-        font-size: 1rem;
-        padding: 0.6rem 1rem;
-        display: block;
-        border-radius: 6px;
-        transition: all 0.3s ease;
-    }
-
-    .nav-links li a:hover {
-        background: rgba(37, 99, 235, 0.1);
-        transform: none;
+        height: fit-content;
+        min-height: 100vh;
     }
     
     .section__pic-container {
         width: 250px;
         height: 250px;
-        justify-content: center;
         margin: 0 auto 2rem;
-    }
-    
-    .section__text__p2 {
-        font-size: 1.4rem;
     }
     
     .title {
         font-size: 2.2rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
     }
-
+    
+    .section__text__p1 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .section__text__p2 {
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+    }
+    
+    /* Buttons */
+    .btn-container {
+        gap: 1rem;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
     .btn {
         font-size: 1rem;
         padding: 0.8rem 1.5rem;
+        min-width: 140px;
     }
-
+    
+    /* About section (Work Experience) */
+    .about-containers {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        max-width: 500px;
+        margin: 2rem auto;
+        align-items: center;
+        justify-content: center;
+    }
+    
     .details-container {
         padding: 1.5rem;
+        text-align: center;
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
-
-    .tech-stack {
-        gap: 0.8rem;
+    
+    /* Experience section */
+    .experience-details-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 0;
     }
-
+    
+    .about-containers {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        max-width: 500px;
+        margin: 2rem auto;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .details-container {
+        padding: 1.5rem;
+        text-align: center;
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .experience-sub-title {
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+        text-align: center;
+        width: 100%;
+    }
+    
+    /* Tech stack */
     .tech-icon {
         width: 40px;
         height: 40px;
     }
+    
+    .tech-stack {
+        gap: 0.8rem;
+        justify-content: center;
+    }
+    
+    .tech-category h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    /* Certifications */
+    .cert-logo {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .cert-details h3 {
+        font-size: 1.1rem;
+        line-height: 1.3;
+    }
+    
+    .cert-issuer {
+        font-size: 0.9rem;
+    }
+    
+    .cert-date {
+        font-size: 0.85rem;
+    }
+    
+    /* Projects */
+    .project-img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        margin: 0 auto;
+    }
+    
+    .project-title {
+        font-size: 1.4rem;
+        margin: 1rem 0 0.5rem;
+    }
+    
+    .project-description {
+        font-size: 0.95rem;
+    }
+    
+    /* Contact */
+    .contact-info-upper-container {
+        flex-direction: column;
+        gap: 1.5rem;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .contact-info-container {
+        padding: 1.5rem;
+        text-align: center;
+    }
+    
+    .contact-icon,
+    .phone-icon-container {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    
+    .phone-icon {
+        font-size: 1.2rem;
+    }
+}
 
+/* Tablets (769px - 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Layout adjustments */
     section {
-        padding-top: 15vh;
+        padding: 4rem 3rem;
+        margin: 0;
+    }
+    
+    /* Profile section */
+    #profile {
+        padding: 4rem 3rem;
+        height: fit-content;
+        min-height: 100vh;
+    }
+    
+    .section__pic-container {
+        width: 300px;
+        height: 300px;
+        margin: 0 auto 2rem;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+    
+    .section__text__p2 {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+    }
+    
+    /* About section */
+    .about-containers {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        max-width: 700px;
+        margin: 2rem auto;
+    }
+    
+    /* Experience section */
+    .experience-details-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .experience-sub-title {
+        font-size: 1.8rem;
+    }
+    
+    /* Tech stack */
+    .tech-icon {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .tech-stack {
+        gap: 1rem;
+    }
+    
+    .tech-category h3 {
+        font-size: 1.3rem;
+    }
+    
+    /* Certifications */
+    .cert-logo {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .cert-details h3 {
+        font-size: 1.2rem;
+    }
+    
+    /* Projects */
+    .project-img {
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+    }
+    
+    .project-title {
+        font-size: 1.5rem;
+    }
+    
+    /* Contact */
+    .contact-info-upper-container {
+        flex-direction: row;
+        gap: 2rem;
+        max-width: 600px;
+        margin: 0 auto;
+        justify-content: center;
+    }
+    
+    .contact-info-container {
+        flex: 1;
+        max-width: 250px;
+    }
+}
+
+/* Small to Medium Desktops (1025px - 1440px) */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    /* Container management */
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+    
+    /* Profile section */
+    .section__pic-container {
+        width: 350px;
+        height: 350px;
+    }
+    
+    .title {
+        font-size: 3rem;
+    }
+    
+    .section__text__p2 {
+        font-size: 1.8rem;
+    }
+    
+    /* About section */
+    .about-containers {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        max-width: 800px;
+        margin: 2rem auto;
+    }
+    
+    /* Experience section */
+    .experience-details-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    
+    .experience-sub-title {
+        font-size: 2rem;
+    }
+    
+    /* Tech stack */
+    .tech-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .tech-category h3 {
+        font-size: 1.4rem;
+    }
+    
+    /* Certifications */
+    .cert-logo {
+        width: 70px;
+        height: 70px;
+    }
+    
+    .cert-details h3 {
+        font-size: 1.3rem;
+    }
+    
+    /* Projects */
+    .project-img {
+        max-width: 500px;
+    }
+    
+    .project-title {
+        font-size: 1.6rem;
+    }
+    
+    /* Contact */
+    .contact-info-upper-container {
+        flex-direction: row;
+        gap: 3rem;
+        justify-content: center;
+    }
+}
+
+/* Large Desktops (1441px and above) */
+@media screen and (min-width: 1441px) {
+    /* Container management */
+    .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+    
+    /* Profile section */
+    .section__pic-container {
+        width: 400px;
+        height: 400px;
+    }
+    
+    .title {
+        font-size: 3.5rem;
+    }
+    
+    .section__text__p2 {
+        font-size: 2rem;
+    }
+    
+    /* About section */
+    .about-containers {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+        max-width: 1000px;
+        margin: 3rem auto;
+    }
+    
+    /* Experience section */
+    .experience-details-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .experience-sub-title {
+        font-size: 2.2rem;
+    }
+    
+    /* Tech stack */
+    .tech-icon {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .tech-category h3 {
+        font-size: 1.5rem;
+    }
+    
+    /* Certifications */
+    .cert-logo {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .cert-details h3 {
+        font-size: 1.4rem;
+    }
+    
+    /* Projects */
+    .project-img {
+        max-width: 600px;
+    }
+    
+    .project-title {
+        font-size: 1.8rem;
+    }
+    
+    /* Contact */
+    .contact-info-upper-container {
+        flex-direction: row;
+        gap: 4rem;
+        justify-content: center;
+    }
+}
+
+/* iPhone 12 Pro and similar devices (390px) - Specific optimizations */
+@media screen and (max-width: 390px) {
+    /* Tighter layout for iPhone 12 Pro */
+    section {
+        padding: 1.5rem 0.8rem;
+        margin: 0;
+        text-align: center;
+    }
+    
+    /* Profile section - NO IMAGE, ENHANCED TEXT LAYOUT */
+    #profile {
+        padding: 4rem 1rem 3rem;
+        text-align: center;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .section__pic-container {
+        display: none; /* Ensure profile picture is hidden */
+    }
+    
+    .section__text {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    
+    #profile .section__text__p1 {
+        font-size: 0.95rem;
+        margin-bottom: 1.2rem;
+        color: #888;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+    
+    #profile .title {
+        font-size: 2rem;
+        margin-bottom: 1.2rem;
+        background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-weight: 700;
+        line-height: 1.1;
+    }
+    
+    #profile .section__text__p2 {
+        font-size: 1.3rem;
+        margin-bottom: 2.5rem;
+        color: #555;
+        font-weight: 600;
+        line-height: 1.3;
+    }
+    
+    /* Experience section - iPhone 12 Pro specific */
+    #experience {
+        padding: 2rem 0.5rem;
+        text-align: center;
+    }
+    
+    .experience-details-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.2rem;
+        max-width: 340px;
+        margin: 0 auto;
+        padding: 0 0.5rem;
+        width: 100%;
+    }
+    
+    .about-containers {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+        margin: 0 auto;
+        max-width: 320px;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .details-container {
+        padding: 1.2rem;
+        margin: 0 auto;
+        max-width: 300px;
+        width: 100%;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .article-container {
+        gap: 0.8rem;
+        padding: 0 0.5rem;
+    }
+    
+    article {
+        max-width: 260px;
+        padding: 0.5rem;
+    }
+    
+    .tech-stack {
+        gap: 0.6rem;
+        padding: 0.5rem;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    
+    .tech-stack div h3 {
+        font-size: 0.9rem;
+        margin-bottom: 0.2rem;
+    }
+    
+    .tech-stack div p {
+        font-size: 0.8rem;
+        margin: 0;
+    }
+    
+    /* Volunteering section - NO LOGO, BEAUTIFUL TEXT LAYOUT */
+    #volunteering {
+        padding: 1.5rem 0.5rem;
+        text-align: center;
+    }
+    
+    .lions-container {
+        padding: 1.5rem 1rem;
+        margin: 0 auto;
+        max-width: 340px;
+        background: #f8f9fa;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    }
+    
+    .lions-logo-container {
+        display: none; /* Ensure Lions logo is hidden */
+    }
+    
+    .lions-logo {
+        display: none; /* Ensure Lions logo is hidden */
+    }
+    
+    .lions-content {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .project-title {
+        font-size: 1.2rem;
+        margin: 0 0 1.2rem;
+        line-height: 1.3;
+        color: #333;
+        font-weight: 700;
+        background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    .key-achievements h4 {
+        font-size: 1rem;
+        margin-bottom: 0.6rem;
+        color: #444;
+        font-weight: 600;
     }
 
-    section:nth-child(even) {
-        padding-left: 5%;
-        padding-right: 5%;
+    .achievement-list {
+        text-align: left;
+        list-style: none;
+        padding: 0;
+        margin: 1rem 0;
+    }
+
+    .achievement-list li {
+        position: relative;
+        padding-left: 0;
+        margin-bottom: 0.8rem;
+        line-height: 1.5;
+        color: #555;
+        font-size: 0.9rem;
+    }
+
+    .volunteering-buttons {
+        display: flex;
+        gap: 0.75rem;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem auto;
+        flex-wrap: nowrap !important;
+        width: 100%;
+        text-align: center;
+    }
+
+    .volunteering-buttons .btn {
+        font-size: 0.8rem !important;
+        padding: 0.7rem 1.1rem !important;
+        flex: 0 0 auto;
+        min-width: 110px;
+        text-align: center;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+        background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+        color: white !important;
+        text-decoration: none;
+        font-weight: 500;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-icon {
+        margin-right: 0.4rem;
+        font-size: 1em;
+    }
+
+    .btn-logo {
+        width: 18px;
+        height: 18px;
+        margin-right: 0.4rem;
+        filter: brightness(0) invert(1);
+        object-fit: contain;
+    }
+
+    .volunteering-buttons .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+        filter: brightness(1.05);
+    }
+    
+    .key-achievements p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+        margin-bottom: 0.8rem;
+        padding: 0 0.2rem;
+        color: #555;
+    }
+    
+    .achievement-list {
+        max-width: 300px;
+        margin: 1.2rem auto;
+        text-align: left;
+    }
+    
+    .achievement-list li {
+        font-size: 0.8rem;
+        line-height: 1.4;
+        margin-bottom: 0.7rem;
+        padding-left: 0;
+        color: #555;
+        position: relative;
+    }
+    
+    /* Enhanced button styling */
+    .btn {
+        font-size: 0.85rem;
+        padding: 0.7rem 1.2rem;
+        min-width: 130px;
+        margin: 0.3rem;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+    }
+    
+    .btn-container {
+        gap: 0.6rem;
+        margin: 2rem auto 0;
+        justify-content: center;
+    }
+    
+    /* Section titles */
+    .title {
+        font-size: 1.7rem;
+        margin-bottom: 1rem;
+        padding: 0 0.5rem;
+    }
+    
+    .section__text__p1 {
+        font-size: 0.85rem;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Universal Responsive Utilities */
+
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Make sure containers don't overflow */
+.container,
+.section-container {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Responsive text alignment */
+@media screen and (max-width: 768px) {
+    .section__text,
+    .certification-header,
+    .project-header {
+        text-align: center;
+    }
+    
+    /* Center icons and images */
+    .cert-icon,
+    .project-img {
+        margin: 0 auto;
+    }
+    
+    /* Stack elements vertically on mobile */
+    .certification-header,
+    .project-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    /* Ensure touch-friendly buttons */
+    .btn {
+        min-height: 44px;
+        touch-action: manipulation;
+    }
+}
+
+/* Landscape phone optimization */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    #profile {
+        min-height: auto;
+        padding: 2rem 1rem;
+    }
+    
+    .section__pic-container {
+        width: 200px;
+        height: 200px;
+        margin: 0 auto 1rem;
+    }
+    
+    .title {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .section__text__p2 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .btn-container {
+        margin: 1rem 0;
+    }
+}
+
+/* Print styles */
+@media print {
+    * {
+        background: transparent !important;
+        color: black !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+        padding-top: 0;
+    }
+    
+    #hamburger-nav,
+    #desktop-nav,
+    .hamburger-menu,
+    .btn {
+        display: none !important;
+    }
+    
+    section {
+        page-break-inside: avoid;
+        margin: 1cm 0;
+        padding: 0;
+    }
+    
+    .title {
+        font-size: 18pt;
+        margin-bottom: 0.5cm;
+    }
+    
+    .section__pic-container {
+        max-width: 4cm;
+        height: auto;
+    }
+    
+    .details-container {
+        border: 1px solid #ccc;
+        padding: 0.5cm;
+        margin-bottom: 0.5cm;
+        page-break-inside: avoid;
     }
 }
